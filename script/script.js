@@ -1,83 +1,48 @@
-
 let numberOfImages = document.querySelectorAll("img").length;
 for (let i = 0; i < numberOfImages; i++) {
     document.querySelectorAll("img")[i].addEventListener("click", function () {
         let clickedWeapon = this.alt;
-        setToCompare(clickedWeapon);
-    })
+        document.getElementById("player").innerHTML=clickedWeapon;
+        compareWeapon(clickedWeapon);
+    });
 }
 
-let nobitaScore = 0;
-let giyanScore = 0;
+function compareWeapon(weapon) {
+    let weapons = ["Rock", "Paper", "Scissors"];
+    let computerChoice = weapons[Math.floor(Math.random() * 3)];
+    document.getElementById("computer").innerHTML=computerChoice;
 
-let weapons = ["rock", "paper", "scissors"];
-let giyanChoice = weapons[Math.floor(Math.random() * 3)];
-
-// let giyanArray=[];
-// for (let i = 0; i < 5; i++) {
-//     let giyanChoice = weapons[Math.floor(Math.random() * 3)];
-//     giyanArray.push(giyanChoice);
-// }
-
-
-function setToCompare(weapon){
-
-    if(weapon==="rock"){
-        if(giyanChoice==="paper"){
-            document.getElementById("para3").innerHTML = "You lose, Giyan will beat Nobita 💔"
+    if (weapon === "Rock") {
+        if (computerChoice === "Paper") {
+            document.getElementById("final-winner").innerHTML = "Computer won 💻";
         }
-        else if (giyanChoice==="scissors"){
-            document.getElementById("para3").innerHTML = "You saved Nobita from Giyan ❤️"
+        else if (computerChoice === "Scissors") {
+            document.getElementById("final-winner").innerHTML = "You won 🏆";
         }
         else {
-            document.getElementById("para3").innerHTML = "Match Tie !!"
+            document.getElementById("final-winner").innerHTML = "Match Tie !";
         }
     }
-    else if(weapon==="paper"){
-        if(giyanChoice==="scissors"){
-            document.getElementById("para3").innerHTML = "You lose, Giyan will beat Nobita 💔"
+    else if (weapon === "Paper") {
+        if (computerChoice === "Scissors") {
+            document.getElementById("final-winner").innerHTML = "Computer won 💻";
         }
-        else if (giyanChoice==="rock"){
-            document.getElementById("para3").innerHTML = "You saved Nobita from Giyan ❤️"
+        else if (computerChoice === "Rock") {
+            document.getElementById("final-winner").innerHTML = "You won 🏆";
         }
         else {
-            document.getElementById("para3").innerHTML = "Match Tie !!"
+            document.getElementById("final-winner").innerHTML = "Match Tie !"
         }
     }
-    else{
-        if(giyanChoice==="rock"){
-            document.getElementById("para3").innerHTML = "You lose, Giyan will beat Nobita 💔"
+    else {
+        if (computerChoice === "Rock") {
+            document.getElementById("final-winner").innerHTML = "Computer won 💻";
         }
-        else if (giyanChoice==="paper"){
-            document.getElementById("para3").innerHTML = "You saved Nobita from Giyan ❤️"
+        else if (computerChoice === "Paper") {
+            document.getElementById("final-winner").innerHTML = "You won 🏆";
         }
         else {
-            document.getElementById("para3").innerHTML = "Match Tie !!"
+            document.getElementById("final-winner").innerHTML = "Match Tie !"
         }
     }
 }
-
-// function compareWeapon(weapon) {
-//     while ((nobitaScore || giyanScore) < 5) {
-//         if (weapon === "rock") {
-//             if (giyanChoice === "paper") {
-//                 giyanScore++;
-//                 document.getElementById("you").innerHTML = giyanScore;
-//             }
-//             else if (giyanChoice === "scissors") {
-//                 nobitaScore++;
-//                 document.getElementById("giyan").innerHTML = nobitaScore;
-//             }
-//             else {
-//                 // continue;
-//             }
-//         }
-//     }
-//     if (nobitaScore > giyanScore) {
-//         document.getElementById("para3").innerHTML = "You saved Nobita from Giyan ❤️"
-//     }
-//     else {
-//         document.getElementById("para3").innerHTML = "You lose, Giyan will beat Nobita 💔"
-//     }
-//     console.log(weapon)
-// }
