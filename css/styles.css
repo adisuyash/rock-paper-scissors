@@ -14,20 +14,20 @@ div.main-text {
   width: 45%;
   margin: auto;
 }
+
+h1 {
+  text-shadow: .5px .5px 1px rgb(48, 48, 48), -.5px -.5px 1px rgb(50, 50, 50);
+}
+
 h1 {
   margin-top: 8%;
   font-size: 64px;
 }
+
 p {
   font-size: 24px;
 }
 
-/* I want one para after another then at last, the #para3 which is displaying must display only while playing the game (as showing on the website currently) */
-#para1,
-#para2 {
-  display: none;
-}
-/* Stone Paper Scissor Score & Images */
 .players,
 .score,
 .image-flex {
@@ -35,15 +35,18 @@ p {
   flex-wrap: wrap;
   justify-content: center;
 }
+
 .players,
 .score {
   margin: 5% auto;
   justify-content: space-evenly;
   font-size: 22px;
 }
-.choose {
-  font-size: 32px;
+
+.choose-weapon {
+  font-size: 24px;
 }
+
 .images {
   width: 6%;
   padding: 20px;
@@ -51,13 +54,8 @@ p {
   border: 1px solid white;
   border-radius: 15%;
 }
+
 .images:hover {
   box-shadow: 1px 1px 10px white, -1px -1px 10px white;
-  transform: scale(1.03);
+  transform: scale(1.05);
 }
-p.count {
-  font-size: 36px;
-}
-
-/* Animation to be done here 
-paragraphs to be revealed */
