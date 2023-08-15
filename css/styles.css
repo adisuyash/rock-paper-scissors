@@ -8,7 +8,11 @@ body {
   text-align: center;
 }
 
-h1,
+h1 {
+  width: 55%;
+  margin: auto;
+}
+
 div.score-img,
 div.main-text {
   width: 45%;
