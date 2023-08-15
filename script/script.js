@@ -2,7 +2,7 @@ let numberOfImages = document.querySelectorAll("img").length;
 for (let i = 0; i < numberOfImages; i++) {
     document.querySelectorAll("img")[i].addEventListener("click", function () {
         let clickedWeapon = this.alt;
-        document.getElementById("player").innerHTML=clickedWeapon;
+        document.getElementById("player").innerHTML = clickedWeapon;
         compareWeapon(clickedWeapon);
     });
 }
@@ -10,39 +10,68 @@ for (let i = 0; i < numberOfImages; i++) {
 function compareWeapon(weapon) {
     let weapons = ["Rock", "Paper", "Scissors"];
     let computerChoice = weapons[Math.floor(Math.random() * 3)];
-    document.getElementById("computer").innerHTML=computerChoice;
+    document.getElementById("computer").innerHTML = computerChoice;
 
     if (weapon === "Rock") {
         if (computerChoice === "Paper") {
-            document.getElementById("final-winner").innerHTML = "Computer won 💻";
+            youLost()
         }
         else if (computerChoice === "Scissors") {
-            document.getElementById("final-winner").innerHTML = "You won 🏆";
+            youWon()
         }
         else {
-            document.getElementById("final-winner").innerHTML = "Match Tie !";
+            tie();
         }
     }
     else if (weapon === "Paper") {
         if (computerChoice === "Scissors") {
-            document.getElementById("final-winner").innerHTML = "Computer won 💻";
+            youLost()
         }
         else if (computerChoice === "Rock") {
-            document.getElementById("final-winner").innerHTML = "You won 🏆";
+            youWon()
         }
         else {
-            document.getElementById("final-winner").innerHTML = "Match Tie !"
+            tie()
         }
     }
     else {
         if (computerChoice === "Rock") {
-            document.getElementById("final-winner").innerHTML = "Computer won 💻";
+            youLost()
         }
         else if (computerChoice === "Paper") {
-            document.getElementById("final-winner").innerHTML = "You won 🏆";
+            youWon()
         }
         else {
-            document.getElementById("final-winner").innerHTML = "Match Tie !"
+            tie()
         }
     }
+}
+
+let playerScore = 0;
+let computerScore = 0;
+const maxScore = 5;
+
+function checkScoreCount() {
+    if (playerScore === 5) {
+        document.getElementById("scoreFinal").innerHTML = "🧒 won the Game 🏆";
+    } else if (computerScore === 5) {
+        document.getElementById("scoreFinal").innerHTML = "💻 won the Game 🏆";
+    }
+}
+function youLost() {
+    document.getElementById("final-winner").innerHTML = "💻 won this round";
+    computerScore += 1;
+    console.log(`loss Player score ${playerScore}`);
+    console.log(`loss Player score ${computerScore}`);
+    checkScoreCount();
+}
+function youWon() {
+    document.getElementById("final-winner").innerHTML = "🧒 won this round";
+    playerScore += 1;
+    console.log(`won Player score ${playerScore}`);
+    console.log(`won Player score ${computerScore}`);
+    checkScoreCount();
+}
+function tie() {
+    document.getElementById("final-winner").innerHTML = "Round Tie !"
 }
