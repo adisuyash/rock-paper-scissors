@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: black;
+  background-color: rgb(0, 0, 0);
   color: white;
   font-family: "Roboto", sans-serif;
   box-sizing: border-box;
@@ -11,6 +11,13 @@ body {
 h1 {
   width: 55%;
   margin: auto;
+}
+
+#scoreFinal {
+  width: 60%;
+  margin: auto;
+  margin-top: 1%;
+  font-size: 24px;
 }
 
 div.score-img,
@@ -52,7 +59,7 @@ p {
 }
 
 .images {
-  width: 6%;
+  width: 8%;
   padding: 20px;
   margin: auto 3%;
   border: 1px solid white;
@@ -62,4 +69,11 @@ p {
 .images:hover {
   box-shadow: 1px 1px 10px white, -1px -1px 10px white;
   transform: scale(1.05);
+}
+
+#refresh {
+  margin: auto;
+  margin-top: 1%;
+  color: #8f8f8f;
+  display: none;
 }
