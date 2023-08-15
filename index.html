@@ -15,20 +15,27 @@
     <h1>
         Rock Paper Scissors
     </h1>
-    <div class="main-text">
-        <p id="final-winner"> Winner : To be declared </p>
+    <div id="scoreFinal">
+        <div class="main-text">
+            <p id="final-winner"> Winner : To be declared </p>
+        </div>
+        <div class="score-img">
+            <p class="choose-weapon">Choose your Weapon!</p>
+            <div class="image-flex">
+                <img class="images" src="images/rock.png" alt="Rock">
+                <img class="images" src="images/paper.png" alt="Paper">
+                <img class="images" src="images/scissor.png" alt="Scissors">
+            </div>
+            <div class="players">
+                <div class="display-choice">You 🧒<p id="player" class="choice"></p>
+                </div>
+                <div class="display-choice">Computer 💻<p id="computer" class="choice"></p>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="score-img">
-        <p class="choose-weapon">Choose your Weapon!</p>
-        <div class="image-flex">
-            <img class="images" src="images/rock.png" alt="Rock">
-            <img class="images" src="images/paper.png" alt="Paper">
-            <img class="images" src="images/scissor.png" alt="Scissors">
-        </div>
-        <div class="players">
-            <div class="display-choice">You 🧒<p id="player" class="choice"></p></div>
-            <div class="display-choice">Computer 💻<p id="computer" class="choice"></p></div>
-        </div>
+    <div id="refresh">
+        Press F5 to restart
     </div>
     <script src="script/script.js"></script>
 </body>
