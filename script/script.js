@@ -53,23 +53,21 @@ const maxScore = 5;
 
 function checkScoreCount() {
     if (playerScore === 5) {
-        document.getElementById("scoreFinal").innerHTML = "🧒 won the Game 🏆";
+        document.getElementById("scoreFinal").innerHTML = "🧒 Wow! you won the game 🏆";
+        document.getElementById("refresh").style.display = "block";
     } else if (computerScore === 5) {
-        document.getElementById("scoreFinal").innerHTML = "💻 won the Game 🏆";
+        document.getElementById("scoreFinal").innerHTML = "💻 Oops! Computer won the game 😔";
+        document.getElementById("refresh").style.display = "block";
     }
 }
 function youLost() {
-    document.getElementById("final-winner").innerHTML = "💻 won this round";
+    document.getElementById("final-winner").innerHTML = "Computer won this round";
     computerScore += 1;
-    console.log(`loss Player score ${playerScore}`);
-    console.log(`loss Player score ${computerScore}`);
     checkScoreCount();
 }
 function youWon() {
-    document.getElementById("final-winner").innerHTML = "🧒 won this round";
+    document.getElementById("final-winner").innerHTML = "You won this round";
     playerScore += 1;
-    console.log(`won Player score ${playerScore}`);
-    console.log(`won Player score ${computerScore}`);
     checkScoreCount();
 }
 function tie() {
