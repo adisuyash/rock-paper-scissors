@@ -60,16 +60,31 @@ function checkScoreCount() {
         document.getElementById("refresh").style.display = "block";
     }
 }
+
 function youLost() {
-    document.getElementById("final-winner").innerHTML = "Computer won this round";
+    document.getElementById("final-winner").style.color = "#ffffff";
+    document.getElementById("final-winner").innerHTML = "...";
     computerScore += 1;
     checkScoreCount();
+    setTimeout(() => {
+        document.getElementById("final-winner").style.color = "#ffb0e5";
+        document.getElementById("final-winner").innerHTML = "Computer won this round";
+    }, 250);
 }
 function youWon() {
-    document.getElementById("final-winner").innerHTML = "You won this round";
+    document.getElementById("final-winner").style.color = "#ffffff";
+    document.getElementById("final-winner").innerHTML = "...";
     playerScore += 1;
     checkScoreCount();
+    setTimeout(() => {
+        document.getElementById("final-winner").style.color = "#6fff5c";
+        document.getElementById("final-winner").innerHTML = "You won this round";
+    }, 250);
 }
 function tie() {
-    document.getElementById("final-winner").innerHTML = "Round Tie !"
+    document.getElementById("final-winner").style.color = "#ffffff";
+    document.getElementById("final-winner").innerHTML = "...";
+    setTimeout(() => {
+        document.getElementById("final-winner").innerHTML = "Round Tie !";
+    }, 250);
 }

@@ -1,7 +1,22 @@
 body {
+  background: linear-gradient(
+    0deg,
+    #000000 0%,
+    #14013a 10%,
+    #1f005c 20%,
+    #1e0061 30%,
+    #1c006d 40%,
+    #150080 50%,
+    #090197 70%,
+    #07017a 85%,
+    #030136 95%,
+    #000000 100%
+  );
+  background-repeat:no-repeat;
+  background-size: cover;
+  height:100dvh;
   margin: 0;
   padding: 0;
-  background-color: rgb(0, 0, 0);
   color: white;
   font-family: "Roboto", sans-serif;
   box-sizing: border-box;
@@ -9,12 +24,36 @@ body {
 }
 
 h1 {
-  width: 55%;
+  width: 70%;
   margin: auto;
+  text-shadow: 2px 1px 1px rgb(48, 48, 48), -.5px -1px 1px rgb(50, 50, 50);
+  margin-top: 8%;
+  font-size: 64px;
+  font-weight: 400;
+  font-family: 'Russo One',  Roboto, sans-serif;
+}
+h2 {
+  font-size: 30px;
+  margin: 2rem auto;
+}
+
+.choose-weapon,
+.display-player{
+  width: 90%;
+  font-weight: 400;
+  font-family: "Russo One", Roboto, sans-serif;
+  filter: drop-shadow(3px 1px 3px rgb(0, 0, 0));
+}
+
+.display-choice{
+  width: 45%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 #scoreFinal {
-  width: 60%;
+  width: 70%;
   margin: auto;
   margin-top: 1%;
   font-size: 24px;
@@ -22,48 +61,21 @@ h1 {
 
 div.score-img,
 div.main-text {
-  width: 45%;
+  width: 60%;
   margin: auto;
 }
 
-h1 {
-  text-shadow: .5px .5px 1px rgb(48, 48, 48), -.5px -.5px 1px rgb(50, 50, 50);
-}
-
-h1 {
-  margin-top: 8%;
-  font-size: 64px;
-}
-
 p {
-  font-size: 24px;
-}
-
-.players,
-.score,
-.image-flex {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.players,
-.score {
-  margin: 5% auto;
-  justify-content: space-evenly;
-  font-size: 22px;
-}
-
-.choose-weapon {
-  font-size: 24px;
+  font-size: 26px;
 }
 
 .images {
-  width: 8%;
+  width: 12%;
   padding: 20px;
   margin: auto 3%;
   border: 1px solid white;
   border-radius: 15%;
+  transition: ease-in-out;
 }
 
 .images:hover {
@@ -71,9 +83,91 @@ p {
   transform: scale(1.05);
 }
 
+.players,
+.image-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.players {
+  width:100%;
+  margin: auto;
+  font-size: 22px;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 1rem;
+}
+
+#player, 
+#computer{
+  margin:auto;
+  height:2rem;
+  width:100%;
+}
+
+#final-winner{
+  width: 100%;
+  height: 34px;
+}
+
 #refresh {
   margin: auto;
   margin-top: 1%;
   color: #8f8f8f;
   display: none;
+}
+
+/* ------------ RESPONSIVE MEDIA QUERIES ------------ */
+
+@media screen and (max-width: 1024px){
+  h1 {
+    width: 90%;
+  }
+  div.score-img,
+  div.main-text {
+    width: 80%;
+  }
+  .images {
+    width: 10%;
+  }
+}
+
+@media screen and (max-width: 768px){
+  h1 {
+    font-size: 52px;
+  }
+  p {
+    font-size: 24px;
+  }
+  div.score-img,
+  div.main-text {
+    width: 90%;
+  }
+  
+}
+@media screen and (max-width: 576px){
+  h1 {
+    font-size: 42px;
+  }
+  h2 {
+    width: 100%;
+    font-size: 24px;
+    margin: 1rem auto;
+  }
+  #scoreFinal {
+    width: 94%;
+    margin-top: 10%;
+  }
+  .display-choice{
+    width: 90%;
+  }
+  .images {
+    width: 15%;
+    padding: 15px;
+    margin: 2%;
+  }
+  #refresh {
+    margin-top: 2%;
+  }
 }

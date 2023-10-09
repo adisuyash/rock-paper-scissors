@@ -6,38 +6,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&family=Russo+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/styles.css">
+
     <title>Rock Paper Scissors</title>
 </head>
 
 <body>
-    <h1>
-        Rock Paper Scissors
-    </h1>
-    <div id="scoreFinal">
-        <div class="main-text">
-            <p id="final-winner"> Winner : To be declared </p>
-        </div>
-        <div class="score-img">
-            <p class="choose-weapon">Choose your Weapon!</p>
-            <div class="image-flex">
-                <img class="images" src="images/rock.png" alt="Rock">
-                <img class="images" src="images/paper.png" alt="Paper">
-                <img class="images" src="images/scissor.png" alt="Scissors">
-            </div>
-            <div class="players">
-                <div class="display-choice">You 🧒<p id="player" class="choice"></p>
-                </div>
-                <div class="display-choice">Computer 💻<p id="computer" class="choice"></p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div id="refresh">
-        Press F5 to restart
-    </div>
-    <script src="script/script.js"></script>
-</body>
+    <main>
 
+        <h1>
+            Rock Paper Scissors
+        </h1>
+        <div id="scoreFinal">
+            <div class="score-img">
+                <h2 class="choose-weapon">Choose your Weapon!</h2>
+                <div class="image-flex">
+                    <img class="images" src="images/rock.png" alt="Rock">
+                    <img class="images" src="images/paper.png" alt="Paper">
+                    <img class="images" src="images/scissor.png" alt="Scissors">
+                </div>
+                <div class="main-text">
+                    <p id="final-winner"> Winner : To be declared... </p>
+                </div>
+                <div class="players">
+                    <div class="display-choice">
+                        <p class="display-player">You 🧒</p>
+                        <p id="player" class="choice"></p>
+                    </div>
+                    <div class="display-choice">
+                        <p class="display-player">Computer 💻</p>
+                        <p id="computer" class="choice"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="refresh">
+            Press F5 to restart
+        </div>
+        <script src="script/script.js"></script>
+    </main>
+</body>
 </html>
